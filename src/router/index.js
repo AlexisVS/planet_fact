@@ -5,6 +5,10 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path:'/',
+    redirect: '/mercury',
+  },
+  {
     path: '/:slug',
     component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue'),
   },
