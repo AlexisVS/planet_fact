@@ -1,7 +1,7 @@
 <template>
   <main class="bg-gray-900">
     <Menu />
-    <router-view :key="this.$route.params.planet"/>
+    <router-view :key="this.$route.params.slug + '-' + this.$route.params.info" />
   </main>
 </template>
 

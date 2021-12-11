@@ -5,9 +5,9 @@
     <span class="text-2xl text-white uppercase ml-12">The planets</span>
     <nav class="flex items-center justify-around space-x-6 mr-12">
       <router-link
-        v-for="planet in planets"
+        v-for="(planet) in planets"
         :key="planet.slug"
-        :to="'/' + planet.slug"
+        :to="'/' + planet.slug + '/' + planet.infos[0].name"
         class="text-gray-300 hover:text-white uppercase font-semibold"
       >{{ planet.name }}</router-link>
     </nav>
@@ -21,7 +21,7 @@ export default {
     return {
       planets: planets.planets,
     }
-  }
+  },
 }
 </script>
 

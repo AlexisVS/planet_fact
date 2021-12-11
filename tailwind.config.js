@@ -4,6 +4,13 @@ module.exports = {
   // mode: 'jit',
   
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  safelist: [
+    {
+      pattern: /bg-(slate|gray|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)/,
+      variants: ['hover', 'focus'],
+
+    },
+  ],
   presets: [],
   theme: {
     extend: {
@@ -11,7 +18,6 @@ module.exports = {
         // Default Colors
         'slate': colors.slate,
         'gray': colors.gray,
-        // 'gray': colors.gray,
         'neutral': colors.neutral,
         'stone': colors.stone,
         'red': colors.red,
@@ -51,7 +57,6 @@ module.exports = {
         'black': colors.black,
         'white': colors.white,
         'slate': colors.slate,
-        // 'cool-gray': colors.coolGray,
         'gray': colors.gray,
         'neutral': colors.neutral,
         'stone': colors.stone,

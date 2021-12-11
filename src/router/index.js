@@ -4,9 +4,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  {path:'/', redirect: '/mercury/overview'},
   {
-    path: '/:slug',
+    path: '/:slug/:info',
     component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue'),
+    // children: [
+    //   {path: '',},
+    // ]
   },
 ]
 
